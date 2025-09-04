@@ -1,4 +1,17 @@
-![](../assets/tempo-banner.png)
+<br>
+<br>
+
+<p align="center">
+  <a href="https://tempo.xyz">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tempoxyz/.github/refs/heads/main/assets/combomark-dark.svg">
+      <img alt="tempo combomark" src="https://raw.githubusercontent.com/tempoxyz/.github/refs/heads/main/assets/combomark-bright.svg" width="auto" height="120">
+    </picture>
+  </a>
+</p>
+
+<br>
+<br>
 
 [Tempo](https://tempo.xyz) is a payments-first blockchain incubated by [Stripe](https://stripe.com) and [Paradigm](https://paradigm.xyz).
 
