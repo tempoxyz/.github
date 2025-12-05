@@ -28,3 +28,5 @@ Tempo’s payments-first design:
 We’re partnering with builders across fintech, banking, ecommerce, agentic finance, and more — if you’d like to build with us, get in touch at partners@tempo.xyz
 
 Apply to join the Tempo team [here](https://jobs.ashbyhq.com/tempo-xyz).
+
+If you've found a security vulnerability in a Tempo project, please see [SECURITY.md](https://github.com/tempoxyz/.github?tab=security-ov-file).
