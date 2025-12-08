@@ -16,7 +16,7 @@
 [Tempo](https://docs.tempo.xyz/) is a blockchain designed specifically for stablecoin payments built with the [Reth SDK](https://github.com/paradigmxyz/reth). Its architecture focuses on high throughput, low cost, and features that financial institutions, payment service providers, and fintech platforms expect from modern payment infrastructure.
 
 What makes Tempo different?
-- **TempoTransaction:** Tempo includes a new EIP-2718 transaction type (0x76), providing features like passkey, call batching, scheduled and parallel transactions, and fee sponsorship natively into the protocol.
+- **TempoTransaction:** Tempo includes a new EIP-2718 transaction type (0x76), providing features like passkey authentication, call batching, scheduled and parallel transactions, and fee sponsorship built natively into the protocol.
 - **TIP-20 token standard:** Enshrined stablecoin token standard optimized for payments and reconciliation.  
 - **Payment lanes:** Tempo ensures that payment transactions always have available blockspace, even during periods of high network congestion from DeFi activity. 
 - **Built with the Reth SDK:** High-performance, modular EVM execution layer under the hood powered by [Reth](https://github.com/paradigmxyz/reth).  
