@@ -23,6 +23,6 @@ What makes Tempo different?
 - **Simplex consensus:** Optimized for low-latency, low-overhead finality under normal conditions.  
 - Fully [EVM-compatible](https://docs.tempo.xyz/quickstart/evm-compatibility).
 
-To learn more checkout our [docs](https://docs.tempo.xyz).
+To learn more, check out our [docs](https://docs.tempo.xyz).
 
 If you've found a security vulnerability in a Tempo project, please see [SECURITY.md](https://github.com/tempoxyz/.github?tab=security-ov-file).
