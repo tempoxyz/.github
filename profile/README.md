@@ -13,20 +13,16 @@
 <br>
 <br>
 
-[Tempo](https://tempo.xyz) is a payments-first blockchain incubated by [Stripe](https://stripe.com) and [Paradigm](https://paradigm.xyz).
+[Tempo](https://docs.tempo.xyz/) is a blockchain designed specifically for stablecoin payments built with the [Reth SDK](https://github.com/paradigmxyz/reth). Its architecture focuses on high throughput, low cost, and features that financial institutions, payment service providers, and fintech platforms expect from modern payment infrastructure.
 
-As stablecoins go mainstream, there’s a need for optimized infrastructure. Tempo is purpose-built for stablecoins and real-world payments, born from Stripe’s experience in global payments and Paradigm’s expertise in crypto.
+What makes Tempo different?
+- **TempoTransaction:** Tempo includes a new EIP-2718 transaction type (0x76), providing features like passkey, call batching, scheduled and parallel transactions, and fee sponsorship natively into the protocol.
+- **TIP-20 token standard:** Enshrined stablecoin token standard optimized for payments and reconciliation.  
+- **Payment lanes:** Tempo ensures that payment transactions always have available blockspace, even during periods of high network congestion from DeFi activity. 
+- **Built with the Reth SDK:** High-performance, modular EVM execution layer under the hood powered by [Reth](https://github.com/paradigmxyz/reth).  
+- **Simplex consensus:** Optimized for low-latency, low-overhead finality under normal conditions.  
+- Fully [EVM-compatible](https://docs.tempo.xyz/quickstart/evm-compatibility).
 
-Tempo’s payments-first design:
-- Predictable low fees
-- Opt-in privacy
-- Payments/gas in any stablecoin via enshrined AMM
-- Payments-first UX (dedicated payments lane, memos, access lists, etc)
-- Scale (100K+ TPS, sub-second finality)
-- EVM-compatible, built on [Reth](https://github.com/paradigmxyz/reth)
-
-We’re partnering with builders across fintech, banking, ecommerce, agentic finance, and more — if you’d like to build with us, get in touch at partners@tempo.xyz
-
-Apply to join the Tempo team [here](https://jobs.ashbyhq.com/tempo-xyz).
+To learn more checkout our [docs](https://docs.tempo.xyz).
 
 If you've found a security vulnerability in a Tempo project, please see [SECURITY.md](https://github.com/tempoxyz/.github?tab=security-ov-file).
