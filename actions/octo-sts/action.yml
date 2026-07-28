@@ -1,0 +1,69 @@
+name: Octo STS token
+description: >-
+  Mint a short-lived GitHub App installation token from Tempo's Octo STS
+  (https://prd-nae-octo-sts.tail388b2e.ts.net). Joins the tailnet via
+  Tailscale workload identity federation first (the endpoint is
+  tailnet-only), then exchanges the runner's GitHub OIDC token for an
+  installation token. No stored credentials required.
+
+  The calling workflow must set `permissions: id-token: write`, and the
+  target repository must opt in with a trust policy at
+  .github/chainguard/<identity>.sts.yaml on its default branch.
+
+inputs:
+  scope:
+    description: >-
+      Repository (org/repo) or org whose trust policy to use. The minted
+      token is scoped by that policy.
+    required: true
+  identity:
+    description: >-
+      Trust policy name: .github/chainguard/<identity>.sts.yaml in the
+      scope repository.
+    required: true
+  domain:
+    description: Octo STS domain (tailnet-only).
+    required: false
+    default: prd-nae-octo-sts.tail388b2e.ts.net
+  join-tailnet:
+    description: >-
+      Join the tailnet before the exchange. Set "false" on self-hosted
+      runners that are already on the tailnet.
+    required: false
+    default: "true"
+  ts-oauth-client-id:
+    description: Tailscale trust credential client ID (not a secret).
+    required: false
+    default: TLZa9Liv1Y11CNTRL-kyjr5scteN11CNTRL
+  ts-audience:
+    description: Tailscale trust credential audience (not a secret).
+    required: false
+    default: api.tailscale.com/TLZa9Liv1Y11CNTRL-kyjr5scteN11CNTRL
+  ts-tags:
+    description: Tailscale tags for the ephemeral CI node.
+    required: false
+    default: tag:tempoxyz-github-ci
+
+outputs:
+  token:
+    description: Short-lived GitHub App installation token.
+    value: ${{ steps.exchange.outputs.token }}
+
+runs:
+  using: composite
+  steps:
+    - name: Join tailnet
+      if: inputs.join-tailnet == 'true'
+      uses: tailscale/github-action@780049a30b6ff5c378a9e7b389d15ece7a204888 # v4.1.3
+      with:
+        oauth-client-id: ${{ inputs.ts-oauth-client-id }}
+        audience: ${{ inputs.ts-audience }}
+        tags: ${{ inputs.ts-tags }}
+
+    - name: Exchange OIDC token
+      id: exchange
+      uses: octo-sts/action@f603d3be9d8dd9871a265776e625a27b00effe05 # v1.1.1
+      with:
+        domain: ${{ inputs.domain }}
+        scope: ${{ inputs.scope }}
+        identity: ${{ inputs.identity }}
