@@ -13,7 +13,7 @@
 <br>
 <br>
 
-[Tempo](https://tempo.com/) is a payments-first Layer 1 blockchain incubated by Stripe and Paradigm, purpose-built for stablecoin payments at scale. Built with the [Reth SDK](https://github.com/paradigmxyz/reth), its architecture focuses on high throughput, low cost, and features that financial institutions, payment service providers, and fintech platforms expect from modern payment infrastructure.
+[Tempo](https://tempo.com/) is a purpose-built blockchain for stablecoin financial products, incubated by Stripe and Paradigm. Built with the [Reth SDK](https://github.com/paradigmxyz/reth), its architecture focuses on high throughput, low cost, and features that financial institutions, payment service providers, and fintech platforms expect from modern payment infrastructure.
 
 What makes Tempo different?
 - **TempoTransaction:** Tempo includes a new EIP-2718 transaction type (0x76), providing features like passkey authentication, call batching, scheduled and parallel transactions, and fee sponsorship built natively into the protocol.
